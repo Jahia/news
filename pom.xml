@@ -51,6 +51,11 @@
     <name>Jahia News</name>
     <packaging>bundle</packaging>
     <description>These are the custom module (Jahia News) for running on a Jahia server.</description>
+    <scm>
+        <connection>scm:git:git@github.com:Jahia/news.git</connection>
+        <url>scm:git:git@github.com:Jahia/news.git</url>
+        <developerConnection>scm:git:git@github.com:Jahia/news.git</developerConnection>
+    </scm>
     <repositories>
         <repository>
             <id>jahia-public</id>
