@@ -45,7 +45,7 @@
     <c:set var="parentPage" value="${jcr:getParentOfType(renderContext.mainResource.node, 'jnt:page')}" />
     <c:choose>
         <c:when test="${not empty parentPage}">
-            <c:url value='${parentPage.url}' var="action"/>
+            <c:url value='${parentPage.url}' context="/" var="action"/>
         </c:when>
         <c:otherwise>
             <c:set var="action">javascript:history.back()</c:set>
