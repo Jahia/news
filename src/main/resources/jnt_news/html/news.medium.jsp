@@ -6,6 +6,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="query" uri="http://www.jahia.org/tags/queryLib" %>
 <%@ taglib prefix="functions" uri="http://www.jahia.org/tags/functions" %>
+<%@ taglib prefix="jahia" uri="http://www.jahia.org/tags/templateLib" %>
 
 <template:addResources type="css" resources="news.css"/>
 
@@ -18,6 +19,8 @@
 <div class="newsSummary">
     <!--start newsListItem -->
     <c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
+    <jahia:addCacheDependency node="${newsImage.node}" />
+
     <div class="newsSummaryImg"><img src="${imageUrl}" alt="${newsTitleEscaped}"/></div>
     <h4><a href="<c:url value='${url.base}${currentNode.path}.html'/>">${newsTitleEscaped}</a></h4>
     <p class="newsSummaryresume"> ${fn:substring(functions:removeHtmlTags(newsDesc.string),0,120)}</p>

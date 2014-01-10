@@ -5,9 +5,9 @@
 <%@ taglib prefix="utility" uri="http://www.jahia.org/tags/utilityLib" %>
 <%@ taglib prefix="template" uri="http://www.jahia.org/tags/templateLib" %>
 <%@ taglib prefix="functions" uri="http://www.jahia.org/tags/functions" %>
+<%@ taglib prefix="jahia" uri="http://www.jahia.org/tags/templateLib" %>
 
 <template:addResources type="css" resources="news.css"/>
-
 
 <jcr:nodeProperty node="${currentNode}" name="image" var="newsImage"/>
 <jcr:nodeProperty node="${currentNode}" name="jcr:title" var="newsTitle"/>
@@ -26,6 +26,7 @@
     </p>
 
     <c:if test="${not empty newsImage}">
+        <jahia:addCacheDependency node="${newsImage.node}" />
         <c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
         <div class="newsImg"><a href="<c:url value='${url.base}${currentNode.path}.html'/>"><img src="${imageUrl}"/></a></div>
     </c:if>

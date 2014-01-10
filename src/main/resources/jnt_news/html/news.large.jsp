@@ -4,6 +4,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="utility" uri="http://www.jahia.org/tags/utilityLib" %>
 <%@ taglib prefix="template" uri="http://www.jahia.org/tags/templateLib" %>
+<%@ taglib prefix="jahia" uri="http://www.jahia.org/tags/templateLib" %>
 <template:addResources type="css" resources="news.css"/>
 
  <jcr:nodeProperty node="${currentNode}" name="jcr:title" var="newsTitle"/>
@@ -23,6 +24,7 @@
                 <c:if test="${dateTimeNews != '00:00'}">${dateTimeNews}</c:if>
             </span>
     </p>
+    <jahia:addCacheDependency node="${newsImage.node}" />
     <c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
     <div class="newsImg"><a href="<c:url value='${url.base}${currentNode.path}.detail.html'/>"><img src="${imageUrl}"/></a>
     </div>
