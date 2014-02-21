@@ -24,7 +24,7 @@
             </span>
         </p>
         <c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
-        <div class="newsImg"><a href="${url.current}"><img src="${imageUrl}"/></a></div>
+        <div class="newsImg"><a href="<c:url value='${url.current}'/>"><img src="${imageUrl}"/></a></div>
         <div class="newsResume">
             <textarea rows="10" cols="80" name="newsDesc">${newsDesc.string}</textarea>
         </div>
