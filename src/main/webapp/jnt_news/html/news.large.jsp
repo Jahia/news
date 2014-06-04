@@ -13,7 +13,7 @@
  <jcr:nodeProperty node="${currentNode}" name="image" var="newsImage"/>
 
 <div class="newsListItem"><!--start newsListItem -->
-    <h4><a href="<c:url value='${url.base}${currentNode.path}.detail.html'/>">${newsTitleEscaped}</a></h4>
+    <h4><a href="<c:url value='${url.base}${currentNode.path}.html'/>">${newsTitleEscaped}</a></h4>
 
     <p class="newsInfo">
         <span class="newsLabelDate"><fmt:message key="label.date"/> :</span>
@@ -24,13 +24,13 @@
             </span>
     </p>
     <c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
-    <div class="newsImg"><a href="<c:url value='${url.base}${currentNode.path}.detail.html'/>"><img src="${imageUrl}"/></a>
+    <div class="newsImg"><a href="<c:url value='${url.base}${currentNode.path}.html'/>"><img src="${imageUrl}"/></a>
     </div>
     <div class="newsResume">
         ${newsDesc.string}
     </div>
 
-    <div class="more"><span><a href="<c:url value='${url.base}${currentNode.path}.detail.html'/>">
+    <div class="more"><span><a href="<c:url value='${url.base}${currentNode.path}.html'/>">
         <fmt:message key="label.read"/>: ${newsTitleEscaped}
     </a></span></div>
     <div class="clear"></div>
