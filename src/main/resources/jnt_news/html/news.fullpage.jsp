@@ -22,8 +22,6 @@
             <span class="newsDate"><fmt:formatDate value="${newsDate.date.time}" pattern="dd/MM/yyyy"/>&nbsp;<fmt:formatDate
                     value="${newsDate.date.time}" pattern="HH:mm" var="dateTimeNews"/>
                 <c:if test="${dateTimeNews != '00:00'}">${dateTimeNews}</c:if></span>
-      <br/>
-      		<span class="newsLabelDate"><fmt:message key="jnt_news.author"/>: ${currentNode.properties['author'].string}</span>
     </p>
 	      
     <!-- display categories applied on this news -->
