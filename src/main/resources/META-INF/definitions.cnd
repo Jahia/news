@@ -12,5 +12,4 @@
  - desc (string, richtext) internationalized
  - image (weakreference, picker[type='image'])
  - date (date) = now()
- - author (string, choicelist) < 'Larry Page', 'Eric Schmidt', 'Sergey Brin'
 
