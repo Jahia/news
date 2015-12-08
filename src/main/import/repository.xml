@@ -6,7 +6,6 @@
             j:modulePriority="0"
             j:moduleType="module"
             j:title="Jahia News"
-            jcr:mixinTypes="jmix:hasExternalProviderExtension"
             jcr:primaryType="jnt:module">
                 
                 <portlets jcr:primaryType="jnt:portletFolder"/>

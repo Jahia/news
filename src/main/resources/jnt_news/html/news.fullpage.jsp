@@ -23,7 +23,6 @@
                     value="${newsDate.date.time}" pattern="HH:mm" var="dateTimeNews"/>
                 <c:if test="${dateTimeNews != '00:00'}">${dateTimeNews}</c:if></span>
     </p>
-	      
     <!-- display categories applied on this news -->
     <c:if test="${!empty newsCategories }">
         <div class="newsMeta">
