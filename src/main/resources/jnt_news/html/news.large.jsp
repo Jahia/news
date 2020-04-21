@@ -24,10 +24,12 @@
                 <c:if test="${dateTimeNews != '00:00'}">${dateTimeNews}</c:if>
             </span>
     </p>
-    <jahia:addCacheDependency node="${newsImage.node}" />
-    <c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
-    <div class="newsImg"><a href="<c:url value='${url.base}${currentNode.path}.html'/>"><img src="${imageUrl}"/></a>
-    </div>
+    <c:if test="${not empty newsImage}">
+        <jahia:addCacheDependency node="${newsImage.node}" />
+        <c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
+        <div class="newsImg"><a href="<c:url value='${url.base}${currentNode.path}.html'/>"><img src="${imageUrl}"/></a>
+        </div>
+    </c:if>
     <div class="newsResume">
         ${newsDesc.string}
     </div>

@@ -36,11 +36,11 @@
             </c:if>
         </div>
     </c:if>
-    <!-- image and news body -->
-    <c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
-    <jahia:addCacheDependency node="${newsImage.node}" />
-    <div class="newsImg"><img src="${imageUrl}"/></div>
-
+    <c:if test="${not empty newsImage}"><!-- image and news body -->
+        <c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
+        <jahia:addCacheDependency node="${newsImage.node}" />
+        <div class="newsImg"><img src="${imageUrl}"/></div>
+    </c:if>
     <div class="newsText">
         ${newsDesc.string}
     </div>
