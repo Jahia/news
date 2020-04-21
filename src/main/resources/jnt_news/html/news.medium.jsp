@@ -18,10 +18,11 @@
 
 <div class="newsSummary">
     <!--start newsListItem -->
-    <c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
-    <jahia:addCacheDependency node="${newsImage.node}" />
-
-    <div class="newsSummaryImg"><img src="${imageUrl}" alt="${newsTitleEscaped}"/></div>
+    <c:if test="${not empty newsImage}">
+        <c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
+        <jahia:addCacheDependency node="${newsImage.node}" />
+        <div class="newsSummaryImg"><img src="${imageUrl}" alt="${newsTitleEscaped}"/></div>
+    </c:if>
     <h4><a href="<c:url value='${url.base}${currentNode.path}.html'/>">${newsTitleEscaped}</a></h4>
     <p class="newsSummaryresume"> ${fn:substring(functions:removeHtmlTags(newsDesc.string),0,120)}</p>
     <div class="clear"> </div>
