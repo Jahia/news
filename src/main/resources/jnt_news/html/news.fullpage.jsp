@@ -19,9 +19,13 @@
 
     <p class="newsInfo">
         <span class="newsLabelDate"><fmt:message key="label.date"/>:</span>
-            <span class="newsDate"><fmt:formatDate value="${newsDate.date.time}" pattern="dd/MM/yyyy"/>&nbsp;<fmt:formatDate
+            <span class="newsDate">
+              <c:if test="${not empty newsDate}">
+                <fmt:formatDate value="${newsDate.date.time}" pattern="dd/MM/yyyy"/>&nbsp;<fmt:formatDate
                     value="${newsDate.date.time}" pattern="HH:mm" var="dateTimeNews"/>
-                <c:if test="${dateTimeNews != '00:00'}">${dateTimeNews}</c:if></span>
+              </c:if>
+              <c:if test="${dateTimeNews != '00:00'}">${dateTimeNews}</c:if>
+            </span>
     </p>
     <!-- display categories applied on this news -->
     <c:if test="${!empty newsCategories }">
