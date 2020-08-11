@@ -9,7 +9,7 @@
 <jcr:nodeProperty node="${currentNode}" name="maxNews" var="maxNews"/>
 <jcr:nodeProperty node="${currentNode}" name="filter" var="filter"/>
 <c:choose>
-<c:when test="${empty filter.string}">
+<c:when test="${empty filter or empty filter.string}">
     <c:set var="lastNewsStatement" value="select * from [jnt:news] as news where ISDESCENDANTNODE(news,'${currentNode.resolveSite.path}') order by news.[date] desc"/>
 </c:when>
 <c:otherwise>
