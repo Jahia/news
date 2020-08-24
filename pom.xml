@@ -52,7 +52,7 @@
     <version>8.0.0.0</version>
   </parent>
   <artifactId>news</artifactId>
-  <version>3.1.0-SNAPSHOT</version>
+  <version>3.1.0</version>
   <packaging>bundle</packaging>
   <name>Jahia News</name>
   <description>These are the custom module (Jahia News) for running on a Jahia server.</description>
@@ -60,7 +60,7 @@
     <connection>scm:git:git@github.com:Jahia/news.git</connection>
     <developerConnection>scm:git:git@github.com:Jahia/news.git</developerConnection>
     <url>scm:git:git@github.com:Jahia/news.git</url>
-    <tag>HEAD</tag>
+    <tag>3_1_0</tag>
   </scm>
   <properties>
     <jahia-module-signature>MCwCFBC5T3ovGjKFwHKirsq9Hws30IuVAhREG6yxxhJm+tTimr6DpVqI4KUgRQ==</jahia-module-signature>
