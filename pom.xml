@@ -63,7 +63,7 @@
     <tag>HEAD</tag>
   </scm>
   <properties>
-    <jahia-module-signature>MCwCFBC5T3ovGjKFwHKirsq9Hws30IuVAhREG6yxxhJm+tTimr6DpVqI4KUgRQ==</jahia-module-signature>
+    <jahia-module-signature>MCwCFDhEACgLy2E5TBH7yZ8ZGLQjX9NtAhRuCwtgdnvIXVqEWPThx38k6AEG1w==</jahia-module-signature>
   </properties>
   <repositories>
     <repository>
@@ -79,6 +79,15 @@
       <url>https://devtools.jahia.com/nexus/content/groups/public</url>
     </repository>
   </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.jahia.modules</groupId>
+      <artifactId>seo</artifactId>
+      <version>8.0.0</version>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>
