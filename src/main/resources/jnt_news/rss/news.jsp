@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="functions" uri="http://www.jahia.org/tags/functions" %>
+<%@ taglib prefix="news" uri="http://www.jahia.org/news/resourceimport" %>
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="out" type="java.io.PrintWriter"--%>
 <%--@elvariable id="script" type="org.jahia.services.render.scripting.Script"--%>
@@ -24,5 +25,5 @@
     <link><c:url value="${url.server}${url.context}${url.base}${currentNode.path}.html" var="itemUrl"/>${fn:escapeXml(itemUrl)}</link>
     <guid>${fn:escapeXml(itemUrl)}</guid>
     <description>${functions:abbreviate(functions:removeHtmlTags(currentNode.properties.desc.string),200,250,'...')}</description>
-    <pubDate><fmt:formatDate value="${created.date.time}" pattern="EEE, dd MMM yyyy HH:mm:ss Z"/></pubDate>
+    <pubDate>${news:formatDate(created.date.time)}</pubDate>
 </item>
